@@ -15,4 +15,7 @@ app.use(express.json());
 app.use('/api/todos', todoRoutes);
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Backend running on port ${PORT}`));
+
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🚀 Backend running on http://0.0.0.0:${PORT}`);
+});
